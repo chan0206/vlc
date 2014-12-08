@@ -174,6 +174,9 @@ MetaPanel::MetaPanel( QWidget *parent,
     description_text = new QTextEdit;
     description_text->setAcceptRichText( false );
     metaLayout->addWidget( description_text, line, 0, 1, 7 );
+    
+    ADD_META( VLC_META_DESCRIPTION, encodedby_text, 0, 7 ); line++;
+    
     CONNECT( description_text, textChanged(), this, enterEditMode() );
     line++;
 
